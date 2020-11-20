@@ -8,8 +8,8 @@ class Oso{
   SoundFile file;
   Persona Hombre;
   Oso(){
-  xo= -300;
-  yo= 500;
+  xo= - width / 4 + width / 20;
+  yo= width / 2;
   Osoo = loadImage("Oso.png");
   Hombre= new Persona();
   //file= new SoundFile(this);
@@ -22,19 +22,19 @@ class Oso{
 
 void osoImprimir(){
   imageMode(CENTER);
-  image(Osoo, xo+100, yo, 500, 400);
+  image(Osoo, xo+ width / 10 , yo, width / 2, width / 2 - width / 10 );
   //file.play();
 }
 void osoCorre(){
   xo= xo+2;
-  if(xo > 200){
+  if(xo > width / 5){
     xo = xo +3;
   }
 }
 void osoColision(){
-  if ((xo+270) >= xp){
-   n= 27;
+  if ((xo+ width / 3 - width / 32) >= xp){
+   n= 20;
   }
 }
 
-}
+ }

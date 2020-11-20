@@ -2,12 +2,12 @@
 import processing.sound.*;
 
 // Navegador //
-int i,j,n;
-  float xp = 100;
-  float yp = 550;
+  int i,j,n;
+  float xp = width / 10;
+  float yp = width / 2;
 Aventura Aven;
 void setup(){
-  size(1024, 768);
+  size(800, 600);
   Aven= new Aventura();
 }
 void draw(){

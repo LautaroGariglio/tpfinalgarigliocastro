@@ -20,11 +20,11 @@ class Persona{
 }
 void personaImprimir(){
   imageMode(CENTER);
-  image(Personita, xp, yp, 400, 300);
+  image(Personita, xp, yp, width / 2 - width / 10, width / 4 + width / 20);
 }
 void personaEscapa(){
   if(xp > width){
-    n=26;
+    n=19;
   }
 }
 }
