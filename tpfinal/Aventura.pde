@@ -20,7 +20,7 @@ Aventura(){
   Boton = new Botones();
   Hombre = new Persona();
   Osito = new Oso();
-  Estalactitaa = new Estalactita(width / 3 + width / 3 , - width / 30);
+  Estalactitaa = new Estalactita(600,-30);
   
   fill(0);
   font = loadFont("BookmanOldStyle-Bold-32.vlw");
@@ -32,161 +32,132 @@ void Estados(){
   println(n);
    if(n == 0){
     //Fondo.Reproducir();
-      Imagen.mostrarPantalla(0);
-      Boton.mostrarTitulo();
-      Boton.mostrarBotonD(11,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);
-    } else if (n == 1) {
+     Imagen.mostrarPantalla(0);
+     Boton.mostrarBotonD(11,width - 400,height - 400);
+      Boton.mostrarBotonI(8,width - 800,height - 400);
+ } else if (n == 1) {
       Imagen.mostrarPantalla(1);
       Imagen.mostrarCuadro(1);
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-    } else if (n == 2) {
+      Boton.mostrarBotonD(10,width - 400,height - 400);
+ } else if (n == 2) {
       Imagen.mostrarPantalla(2);
       Imagen.mostrarCuadro(2);
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-    } else if (n == 3) {
+      Boton.mostrarBotonD(10,width - 400,height - 400);
+ } else if (n == 3) {
       Imagen.mostrarPantalla(3);
       Imagen.mostrarCuadro(4);
-      Boton.mostrarBotonD(1,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(5,width / 6 ,width / 2 - width / 10);
-    } else if (n == 4) {
+      Boton.mostrarBotonD(1,width - 400,height - 400);
+      Boton.mostrarBotonI(5,width - 800,height - 400);
+ } else if (n == 4) {
       Imagen.mostrarPantalla(11 );
-      pushStyle();
-      fill(255);
-      textSize(width / 15);
-      textAlign(CENTER);
-      text("Moriste", width/2, height / 5);
-      popStyle();
-      Boton.mostrarBotonD(0, width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);  
-    } else if (n == 5) {
-      Imagen.mostrarPantalla(9);
-      Boton.mostrarBotonD(3,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(12,width / 6 ,width / 2 - width / 10);
-    } else if (n == 6) {
+      Imagen.mostrarCuadro(20);
+      //Boton.mostrarBotonD(8);
+      Boton.mostrarBotonI(0,width - 800,height - 400);  
+ } else if (n == 5) {
+   // Imagen.mostrarPantalla(0);  
+      Imagen.mostrarCuadro(1);
+      Boton.mostrarBotonD(7,width - 400,height - 400);
+      Boton.mostrarBotonI(8,width - 800,height - 400);
+ } else if (n == 6) {
       Imagen.mostrarPantalla(6);
       Imagen.mostrarCuadro(1);
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-    } else if (n == 7) {
+      Boton.mostrarBotonD(10,width - 400,height - 400);
+ } else if (n == 7) {
       Imagen.mostrarPantalla(6);
       Imagen.mostrarCuadro(1);
-      Boton.mostrarBotonI(1,width / 6 ,width / 2 - width / 10);
-      Boton.mostrarBotonD(3,width / 6 + width /2,width / 2 - width / 10);
-    } else if (n == 8) {
+      Boton.mostrarBotonI(1,width - 800,height - 400);
+      Boton.mostrarBotonD(3,width - 400,height - 400);
+ } else if (n == 8) {
       Imagen.mostrarPantalla(14);
       Imagen.mostrarCuadro(14);
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-    } else if (n == 9) {
+      Boton.mostrarBotonD(10,width - 400,height - 400);
+ } else if (n == 9) {
       Imagen.mostrarPantalla(7);
-      Imagen.mostrarCuadro(7);
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);   
-     
-    } else if (n == 10) {
+      Imagen.mostrarCuadro(6);
+      Boton.mostrarBotonD(10,width - 400,height - 400);   
+ } else if (n == 10) {
       Imagen.mostrarPantalla(8);
-      Imagen.mostrarCuadro(9);
-      Boton.mostrarBotonD(8,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(7,width / 6 ,width / 2 - width / 10);
-    } else if (n == 11) {
+      Imagen.mostrarCuadro(7);
+      Boton.mostrarBotonD(8,width - 400,height - 400);
+ } else if (n == 11) {
       Imagen.mostrarPantalla(5);   
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-      Imagen.mostrarCuadro(10);
-    } else  if (n == 12) {
+      Boton.mostrarBotonD(10,width - 400,height - 400);
+      //Boton.mostrarBotonI(1,width - 800,height - 400);
+ } else  if (n == 12) {
       Imagen.mostrarPantalla(0);
-      Boton.mostrarBotonD(0,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);
-    } else  if (n == 13) {
+      Boton.mostrarBotonD(0,width - 400,height - 400);
+      Boton.mostrarBotonI(8,width - 800,height - 400);
+ } else  if (n == 13) {
       Imagen.mostrarPantalla(14);
-      Boton.mostrarBotonD(0,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);
-    } else  if (n == 14) {
+      Boton.mostrarBotonD(0,width - 400,height - 400);
+      Boton.mostrarBotonI(8,width - 800,height - 400);
+ } else  if (n == 14) {
       Imagen.mostrarPantalla(14); 
       Imagen.mostrarCuadro(8);
-      Boton.mostrarBotonD(1,width / 6 + width /2,width / 2 - width / 10);
-    } else  if (n == 15) {
-      Imagen.mostrarPantalla(12);  
-      pushStyle();
-      fill(255);
-      textSize(width / 15);
-      textAlign(CENTER);
-      text("Moriste", width/2, height / 5);
-      popStyle();
-      Boton.mostrarBotonD(0,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);
-    } else if (n == 16) {
+      Boton.mostrarBotonD(1,width - 400,height - 400);
+ } else  if (n == 15) {
+      Imagen.mostrarPantalla(12);    
+      Boton.mostrarBotonD(0,width - 400,height - 400);
+      //Boton.mostrarBotonI(1,width - 800,height - 400);
+ } else if (n == 16) {
       Imagen.mostrarPantalla(13);
-      Boton.mostrarBotonD(1,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(1,width / 6 ,width / 2 - width / 10);
-    } else if (n==17) {
+      Boton.mostrarBotonD(1,width - 400,height - 400);
+      Boton.mostrarBotonI(1,width - 800,height - 400);
+ } else if (n==17) {
       Imagen.mostrarPantalla(7);
-      Boton.mostrarBotonD(8,width / 6 + width /2,width / 2 - width / 10);     
+      //Boton.mostrarBotonD(1);
+      Boton.mostrarBotonI(10,width - 800,height - 400);
     } else if (n == 18) {
       Imagen.mostrarPantalla(6);
       Imagen.mostrarCuadro(11);
-      Boton.mostrarBotonD(2,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(6,width / 6 ,width / 2 - width / 10);
+      Boton.mostrarBotonD(2,width - 400,height - 400);
+      Boton.mostrarBotonI(6,width - 800,height - 400);
     } else if (n == 19) {
       Imagen.mostrarPantalla(13);
-      Boton.mostrarBotonD(1,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(1,width / 6 ,width / 2 - width / 10);
+      Boton.mostrarBotonD(1,width - 400,height - 400);
+      Boton.mostrarBotonI(1,width - 800,height - 400);
     } else if (n == 20) {
       Imagen.mostrarCuadro(12);
       Imagen.mostrarPantalla(9);
-      Boton.mostrarBotonD(3,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(12,width / 6 ,width / 2 - width / 10);
+      Boton.mostrarBotonD(3,width - 400,height - 400);
+      Boton.mostrarBotonI(12,width - 800,height - 400);
     } else if (n == 21) {    
       Imagen.mostrarPantalla(1);
       Imagen.mostrarCuadro(17);
-      Boton.mostrarBotonD(12,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(9,width / 6 ,width / 2 - width / 10);
+      Boton.mostrarBotonD(12,width - 400,height - 400);
+      Boton.mostrarBotonI(9,width - 800,height - 400);
     } else if (n == 22) {
       Imagen.mostrarPantalla(14);
        Imagen.mostrarCuadro(8);
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-      //Boton.mostrarBotonI(9,width / 6 ,width / 2 - width / 10);
+      Boton.mostrarBotonD(10,width - 400,height - 400);
+      //Boton.mostrarBotonI(9);
     } else if (n == 23) {
       Imagen.mostrarPantalla(0);     
       Imagen.mostrarCuadro(18);     
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);    
-    } else if (n==24){    
-      Imagen.mostrarPantalla(18);
-      Jueguito.Iniciar();
-      Boton.mostrarBotonD(11,width / 6 + width /2,width / 2 - width / 10);
+      Boton.mostrarBotonD(0,width - 400,height - 400);    
+    } else if (n==24){
+      Jueguito.Menu();
+      Boton.mostrarBotonD(11,width - 400,height - 400);
    }
       else if (n == 25){
-      Imagen.mostrarPantalla(18);  
-      Hombre.personaImprimir();
-      Osito.osoImprimir();
-      Estalactitaa.estalactitaImprimir();  
-      Hombre.Derecha();
-      Hombre.Izquierda();
-      Hombre.personaEscapa();
-      Osito.osoCorre();
-      Osito.osoColision();
-      Estalactitaa.estalactitaCaida();
-      Estalactitaa.estalactitaColision();
-        
+      background(Cueva);
+      Jueguito.Arranca();
+      Jueguito.Moverse();
    }
-      else if (n == 26){          
-      Imagen.mostrarPantalla(18);  
-      pushStyle();
-      fill(255);
-      text("¡¡ESCAPASTE!!", width/2, height/2- width / 5);
-      popStyle(); 
-      Boton.mostrarBotonD(10,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);
+      else if (n == 26){
+      Jueguito.Victoria();
+      Boton.mostrarBotonD(10,width - 300,height - 360);
+      Boton.mostrarBotonI(8,width - 700,height - 360);
    }
-      else if (n == 27){    
-      Imagen.mostrarPantalla(18);   
-      pushStyle();
-      fill(255);
-      text("¡¡PERDISTE!!", width/2, height/2- width / 5);
-      popStyle();
-      Boton.mostrarBotonD(0,width / 6 + width /2,width / 2 - width / 10);
-      Boton.mostrarBotonI(8,width / 6 ,width / 2 - width / 10);
+      else if (n == 27){
+      Jueguito.Derrota();
+      Boton.mostrarBotonD(0,width - 300,height - 360);
+      Boton.mostrarBotonI(8,width - 700,height - 360);
    }
       else if(n == 28){
       exit();
-   }   
+   }
+   
 }
  void Clickeado(){
    
@@ -201,8 +172,8 @@ void Estados(){
     Boton.clickBotonD( 6);
     Boton.clickBotonI( 8);
   } else if (n == 4) {
-    Boton.clickBotonD( 0);
-    Boton.clickBotonI( 28);
+    //Boton.clickBotonD( 5);
+    Boton.clickBotonI( 0);
   } else if (n == 5) {
     Boton.clickBotonD( 20);
   } else if (n == 6) {
@@ -224,7 +195,6 @@ void Estados(){
     Boton.clickBotonI( 12);
   } else if (n == 12) {
     Boton.clickBotonD( 13);
-    Boton.clickBotonD(28);
   } else if (n == 13) {
     Boton.clickBotonD( 14);
   } else if (n == 14) {
@@ -264,10 +234,26 @@ void Estados(){
       Boton.clickBotonD(25);
      }
      else if(n == 26){
-      Boton.clickBotonD(5);
+      Boton.clickBotonD(18);
      }
      else if(n == 27){
       Boton.clickBotonD(0);
       Boton.clickBotonI(28);
      }
-}}
+}
+ void tecla(){
+  if( key=='m')  
+  {
+    if(player.isPlaying())
+ {
+   player.pause();
+ }
+ else
+ {
+   player.play();}
+  }
+  
+  
+  }
+
+}

@@ -13,16 +13,16 @@ class Estalactita{
 
  }
 void estalactitaImprimir(){
-  image(Estala, xe1, ye1 - width / 20 , width  / 3 - width / 18 , width  / 3 - width / 18 );
+  image(Estala, xe1, ye1 - 50, 300, 300);
  
 }
 void estalactitaCaida(){
-  if (xp > width / 6){
+  if ((xp > 170) || (ye1 < height)){
     ye1= ye1+1;
  }
 }
 void estalactitaColision(){
-    if ((ye1+width / 4 + width / 50 >= yp) && (xe1 + width/ 5  >= xp)) {
+    if ((ye1+270 >= yp) && (xe1+200 >= xp)) {
       
     n = 20;
 
