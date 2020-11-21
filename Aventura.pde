@@ -240,4 +240,20 @@ void Estados(){
       Boton.clickBotonD(0);
       Boton.clickBotonI(28);
      }
-}}
+}
+ void tecla(){
+  if( key=='m')  
+  {
+    if(player.isPlaying())
+ {
+   player.pause();
+ }
+ else
+ {
+   player.play();}
+  }
+  
+  
+  }
+
+}
