@@ -4,12 +4,12 @@ class Oso{
   // imagen del oso
   PImage Osoo;
   // variable de sonido
-  import processing.sound.*;
-  SoundFile file;
+
   Persona Hombre;
+  String osochoca;
   Oso(){
-  xo= -300;
-  yo= 500;
+  xo= - width / 4 + width / 20;
+  yo= width / 2;
   Osoo = loadImage("Oso.png");
   Hombre= new Persona();
   //file= new SoundFile(this);
@@ -21,20 +21,25 @@ class Oso{
 }
 
 void osoImprimir(){
+  pushStyle();
   imageMode(CENTER);
-  image(Osoo, xo+100, yo, 500, 400);
+  image(Osoo, xo+ width / 10 , yo, width / 2, width / 2 - width / 10 );
+  
   //file.play();
+  popStyle();
 }
 void osoCorre(){
-  xo= xo+2;
-  if(xo > 200){
-    xo = xo +3;
+  xo= xo+ width/600;
+  if(xo > width / 5){
+    xo = xo +width / 300;
   }
 }
 void osoColision(){
-  if ((xo+270) >= xp){
-   n= 20;
+  if ((xo- width / 3 - width / 32) >= Hombre.xp){
+   n= 27;
+   osochoca = "osochoca"; 
+   print(osochoca);
   }
 }
 
-}
+ }

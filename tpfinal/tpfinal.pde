@@ -1,24 +1,22 @@
-//import ddf.minim.*;
-import processing.sound.*;
 import ddf.minim.*;
+import processing.sound.*;
 Minim minim;
 AudioPlayer player;
 // Navegador //
-int i,j,n;
-  float xp = 100;
-  float yp = 550;
+  int i,j,n;
+
 Aventura Aven;
-void setup(){
-  minim = new Minim(this);
-  player = minim.loadFile("Bosque.mp3");
+void setup(){ minim = new Minim(this);
+  size(800,600);
+  player = minim.loadFile("Musica.wav");
   player.setGain(-10);
   player.loop();
-  size(1024, 768);
+  
+  
   Aven= new Aventura();
 }
 void draw(){
  Aven.Estados();
-  player.isPlaying();
  
 }
 void mousePressed(){
