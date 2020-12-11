@@ -2,9 +2,10 @@ import ddf.minim.*;
 import processing.sound.*;
 Minim minim;
 AudioPlayer player;
+PVector posicion;
 // Navegador //
   int i,j,n;
-
+  String Estado;
 Aventura Aven;
 void setup(){ minim = new Minim(this);
   size(800,600);

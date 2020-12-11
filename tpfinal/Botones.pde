@@ -56,15 +56,15 @@ void mostrarBotonI(int index, int posx, int posy){
   text(txtBoton[index],xnormal2,ynormal  + ynormal / 15,tx,ty);
   popStyle();
 }
-void clickBotonD(int accion){
+void clickBotonD(String Cambio){
   if ((mouseX > xnormal1) && (mouseX < xnormal1 + tx) && (mouseY > ynormal) && (mouseY < ynormal + ty)) {
-    n = accion; 
+    Estado = Cambio; 
     //Click.Reproducir();
 }
 }
-void clickBotonI(int accion) {
+void clickBotonI(String Cambio) {
   if ((mouseX > xnormal2) && (mouseX < xnormal2 + tx) && (mouseY > ynormal) && (mouseY < ynormal + ty)) {
-    n = accion; 
+    Estado = Cambio; 
     //Click.Reproducir();
 }
 }

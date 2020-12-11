@@ -1,34 +1,42 @@
 class Juego{
-// perseonaje del jugador
-Persona Hombre;
-//enemigo (el oso)
-Oso Osito;
-// Obstaculo 1 (Estalactita)
-Estalactita Estalactitaa;
-// fondo del minijuego //
- PImage Cueva;
-// cuadro del boton
-PImage BotonImg;
-// Pantalla //
-Pantallas Imagen;
-// botones //
-Botones Boton;
-// Constructor del juego //
+
+Personaje p;
+Oso o;
+
+int mov;
 Juego(){
-  Hombre = new Persona();
-  Osito = new Oso();
-  Estalactitaa = new Estalactita(600,-30);
-  BotonImg = loadImage("Boton.jpg");
-  Imagen = new Pantallas();
-  Boton = new Botones();
+  size(800, 600);
+  frameRate(30);
+
+  mov = 0;
+  p = new Personaje();
+  o = new Oso();
 }
-void Iniciar(){     
-   pushStyle();
-   textSize(width / 32);
-   fill(0);
-   textAlign(CENTER);
-   fill(255);
-   text("ESCAPA DE LA CUEVA", width/2, height / 2 - width / 10 );
-   popStyle();
-  }
+void Iniciar(){
+  pushStyle();
+    textSize(48);
+    textAlign(CENTER);
+    fill(255);
+    text("ESCAPA DE LA CUEVA", width / 2, height / 3);
+  popStyle();
+}
+void Movimiento(){
+  
+  if(keyPressed){
+    if(keyCode == UP)
+      mov = 1;    
+    if(keyCode == RIGHT)
+      mov = 2;    
+    if(keyCode == LEFT)
+      mov = 3;
+    }
+  else
+    mov = 0;
+  p.mover(mov);
+  o.correr();
+  p.mostrar();
+  o.mostrar();
+  o.colisionOso();
+  p.escape();
+}
 }
