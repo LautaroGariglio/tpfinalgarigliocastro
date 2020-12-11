@@ -2,7 +2,7 @@ class Juego{
 
 Personaje p;
 Oso o;
-
+Estalactita e;
 int mov;
 Juego(){
   size(800, 600);
@@ -11,6 +11,7 @@ Juego(){
   mov = 0;
   p = new Personaje();
   o = new Oso();
+  e = new Estalactita();
 }
 void Iniciar(){
   pushStyle();
@@ -31,12 +32,17 @@ void Movimiento(){
       mov = 3;
     }
   else
-    mov = 0;
+  mov = 0;
   p.mover(mov);
   o.correr();
+  e.accion();
+  e.caida();
   p.mostrar();
   o.mostrar();
+  e.mostrar();
   o.colisionOso();
   p.escape();
+  e.colisionEs();
+  
 }
 }

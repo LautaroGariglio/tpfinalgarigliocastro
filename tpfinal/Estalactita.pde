@@ -1,35 +1,45 @@
 class Estalactita{
-
- float xe1, ye1;
- PImage Estala;
- // objeto persona para usar sus variables 
- Persona Hombre;
- String estalactitachoca;
- Estalactita(float xe, float ye){
- Estala = loadImage("Estalactita.png");
- Hombre = new Persona();
-
- this.xe1 = xe;
- this.ye1 = ye;
-
- }
-void estalactitaImprimir(){
-  image(Estala, xe1, ye1 - width / 20 , width  / 3 - width / 18 , width  / 3 - width / 18 );
- 
-}
-void estalactitaCaida(){
-  if (Hombre.xp > width / 6){
-    ye1= ye1+width / width;
- }
-}
-void estalactitaColision(){
-    if ((ye1/*+width / 4 + width / 50*/ >= Hombre.yp) && (xe1 + width/ 5  >= Hombre.xp)) {
-      
-    n = 27;
-    estalactitachoca="estalactitachoca";
-    print(estalactitachoca);
+  int x, y, ancho, alto;
+  int caida, sprite; 
+  PImage[] Estala;
+  boolean cae = false;
+  Estalactita(){
+  x = 600;
+  y = 0;
+  ancho = 30;
+  alto = 100;
+  sprite = 0;
+  Estala = new PImage[3];
+  Estala[0] = loadImage("Estalactita.png");
+  Estala[1] = loadImage("Estalactita1.png");
+  Estala[2] = loadImage("Estalactita2.png");
   }
-}
-
-
+  void mostrar(){
+    image(Estala[sprite], x , y , ancho, alto);
+  }
+  void accion(){
+    if(posicion.x >= x - 160 && !cae){
+      sprite++;
+      if(sprite > 2)
+        sprite = 0;
+    }
+  }
+  void caida(){
+    if(posicion.x >= x-100){  
+      sprite = 0;
+      cae = true;
+      if(y > height)
+        cae = false;
+  }
+  if(cae)
+    y += 20;
+  }
+  void colisionEs(){
+    if(cae){
+    if(posicion.x >= 600  && posicion.x <= 600 + ancho){
+      Estado = "Defeat";
+      println("E");
+    }
+    }
+  }
 }
